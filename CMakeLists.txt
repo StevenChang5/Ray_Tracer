@@ -15,6 +15,7 @@ set(SOURCE
     src/hittable_list.h
     src/hittable.h
     src/interval.h
+    src/material.h
     src/ray.h
     src/rtweekend.h
     src/sphere.h
