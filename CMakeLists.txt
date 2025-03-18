@@ -10,9 +10,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(SOURCE
     src/main.cpp
+    src/camera.h
     src/color.h
+    src/hittable_list.h
+    src/hittable.h
+    src/interval.h
     src/ray.h
+    src/rtweekend.h
+    src/sphere.h
     src/vec3.h
+    
 )
 
 include_directories(src)
