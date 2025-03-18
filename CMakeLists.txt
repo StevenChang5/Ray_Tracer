@@ -8,7 +8,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # set(EXTERNAL src/external/stb_image.h)
 
-set(SOURCE src/main.cpp)
+set(SOURCE
+    src/main.cpp
+    src/color.h
+    src/ray.h
+    src/vec3.h
+)
 
 include_directories(src)
 
