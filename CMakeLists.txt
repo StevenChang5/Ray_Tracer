@@ -1,12 +1,17 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.10.0)
 
-project(RayTracing LANGUAGES CXX)
+set(CMAKE_CUDA_ARCHITECTURES 75)
+set(CMAKE_CUDA_COMPILER /usr/local/cuda-12.8/bin/nvcc)
+
+project(RayTracing LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD  11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # set(EXTERNAL src/external/stb_image.h)
+
+set(CMAKE_CUDA_ARCHITECTURES "native")
 
 set(SOURCE
     src/main.cpp
@@ -21,6 +26,10 @@ set(SOURCE
     src/utils.h
     src/vec3.h
     
+)
+
+set(SOURCE_CUDA
+    src/cuda/main.cu
 )
 
 include_directories(src)
@@ -45,3 +54,5 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 add_executable(rt ${SOURCE})
+
+add_executable(rt_cuda ${SOURCE_CUDA})
