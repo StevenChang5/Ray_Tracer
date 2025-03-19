@@ -17,8 +17,8 @@ set(SOURCE
     src/interval.h
     src/material.h
     src/ray.h
-    src/rtweekend.h
     src/sphere.h
+    src/utils.h
     src/vec3.h
     
 )
@@ -44,4 +44,4 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wunused-variable) # Variable is defined but unused
 endif()
 
-add_executable(inOneWeekend ${SOURCE})
+add_executable(rt ${SOURCE})
