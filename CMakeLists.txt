@@ -8,18 +8,18 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # set(EXTERNAL src/external/stb_image.h)
 
-set(SOURCE
-    src/main.cpp
-    src/camera.h
-    src/color.h
-    src/hittable_list.h
-    src/hittable.h
-    src/interval.h
-    src/material.h
-    src/ray.h
-    src/sphere.h
-    src/utils.h
-    src/vec3.h
+set(SRC_SERIAL
+    src/serial/main.cpp
+    src/serial/camera.h
+    src/serial/color.h
+    src/serial/hittable_list.h
+    src/serial/hittable.h
+    src/serial/interval.h
+    src/serial/material.h
+    src/serial/ray.h
+    src/serial/sphere.h
+    src/serial/utils.h
+    src/serial/vec3.h
     
 )
 
@@ -44,4 +44,4 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wunused-variable) # Variable is defined but unused
 endif()
 
-add_executable(rt ${SOURCE})
+add_executable(rt ${SRC_SERIAL})
